@@ -1,0 +1,14 @@
+_|. _ _  _  _  _ _|_    v0.3.9
+(_||| _) (/_(_|| (_| )
+
+Extensions: php | HTTP method: get | Threads: 10 | Wordlist size: 6046
+
+Error Log: /home/elli0t/dirsearch/logs/errors-20-08-28_20-39-47.log
+
+Target: http://10.10.14.220/
+
+[20:41:33] Starting: 
+[20:42:01] 200 -  409B  - /administrator.php
+[20:42:33] 200 -   11KB - /index.html
+
+Task Completed
