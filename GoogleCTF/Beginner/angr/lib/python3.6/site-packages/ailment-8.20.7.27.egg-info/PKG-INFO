@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: ailment
+Version: 8.20.7.27
+Summary: The angr intermediate language.
+Home-page: https://github.com/angr/ailment
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

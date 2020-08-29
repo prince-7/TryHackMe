@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: claripy
+Version: 8.20.7.27
+Summary: An abstraction layer for constraint solvers
+Home-page: https://github.com/angr/claripy
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
