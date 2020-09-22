@@ -1,0 +1,96 @@
+Open 10.10.10.180:111
+Open 10.10.10.180:49678
+Open 10.10.10.180:445
+Open 10.10.10.180:5985
+Open 10.10.10.180:49667
+[~] Starting Nmap
+[>] The Nmap command to be run is nmap -A -vvv -p 111,49678,445,5985,49667 10.10.10.180
+
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-09-06 12:27 IST
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 12:27
+Completed NSE at 12:27, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 12:27
+Completed NSE at 12:27, 0.00s elapsed
+Initiating Ping Scan at 12:27
+Scanning 10.10.10.180 [2 ports]
+Completed Ping Scan at 12:27, 0.38s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 12:27
+Completed Parallel DNS resolution of 1 host. at 12:27, 0.00s elapsed
+DNS resolution of 1 IPs took 0.00s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 12:27
+Scanning 10.10.10.180 [5 ports]
+Discovered open port 111/tcp on 10.10.10.180
+Discovered open port 445/tcp on 10.10.10.180
+Discovered open port 5985/tcp on 10.10.10.180
+Discovered open port 49667/tcp on 10.10.10.180
+Discovered open port 49678/tcp on 10.10.10.180
+Completed Connect Scan at 12:27, 0.17s elapsed (5 total ports)
+Initiating Service scan at 12:27
+Scanning 5 services on 10.10.10.180
+Service scan Timing: About 60.00% done; ETC: 12:28 (0:00:37 remaining)
+Completed Service scan at 12:28, 56.26s elapsed (5 services on 1 host)
+NSE: Script scanning 10.10.10.180.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 12:28
+Completed NSE at 12:28, 9.13s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 12:28
+NSE Timing: About 73.33% done; ETC: 12:29 (0:00:11 remaining)
+Completed NSE at 12:29, 39.51s elapsed
+Nmap scan report for 10.10.10.180
+Host is up, received syn-ack (0.27s latency).
+Scanned at 2020-09-06 12:27:25 IST for 106s
+
+PORT      STATE SERVICE       REASON  VERSION
+111/tcp   open  rpcbind       syn-ack 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3         2049/udp  nfs
+|   100003  2,3,4       2049/tcp  nfs
+|   100005  1,2,3       2049/tcp  mountd
+|   100005  1,2,3       2049/udp  mountd
+|   100021  1,2,3,4     2049/tcp  nlockmgr
+|   100021  1,2,3,4     2049/udp  nlockmgr
+|   100024  1           2049/tcp  status
+|_  100024  1           2049/udp  status
+445/tcp   open  microsoft-ds? syn-ack
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49678/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 45222/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 39703/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 33745/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 15893/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-09-06 12:32:42
+|_  start_date: 1601-01-01 05:53:28
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 12:29
+Completed NSE at 12:29, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 12:29
+Completed NSE at 12:29, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 106.16 seconds
+
